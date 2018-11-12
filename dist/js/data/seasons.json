@@ -1,0 +1,26 @@
+{
+
+	"low" : {
+	"date_from":"15.05",
+	"date_to":"20.06",
+	"econom":1000,
+	"standart":1500,
+	"lux":2000,
+	"child_discount_perc":50
+	},
+	"high" : {
+	"date_from":"21.06",
+	"date_to":"20.08",
+	"econom":1800,
+	"standart":2800,
+	"lux":4000,
+	"child_discount_perc":25
+	},
+	"low2" : {
+	"date_from":"21.08",
+	"date_to":"15.09",
+	"econom":1200,
+	"standart":1800,
+	"lux":2300,
+	"child_discount_perc":25}
+}

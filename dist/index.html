@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, width=device-width">
+    <title>Booking form</title>
+    <script src="js/script.js"></script>
+    <link href="css/styles.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="page-wrap">
+      <h1 class="page-title">Отель Лето</h1>
+      <div class="page-content">
+        <div class="form-booking-wrap">
+          <form class="form-calculate" name="form-calculate">
+            <h2>Форма расчета стоимости</h2>
+            <div class="form-row">
+              <label class="label-overall">Количество гостей</label>
+            </div>
+            <div class="form-row col-3">
+              <label class="label-personal"> <span>Взрослые и дети 12+ </span><span>
+                  <input class="form-calculate__numadult" type="number" name="numAdult" min="1" step="1" value="1" autofocus required></span></label>
+              <label class="label-personal"> <span>Дети 5-12 лет</span><span>
+                  <input class="form-calculate__numteenager" type="number" name="numTeenager" min="0" step="1" value="0"></span></label>
+              <label class="label-personal"> <span>Дети до 5 лет</span><span>
+                  <input class="form-calculate__numchild" type="number" name="numChild" min="0" step="1" value="0"></span></label>
+            </div>
+            <div class="form-row"> 
+              <label class="label-overall label-personal">Тип номера
+                <select class="form-calculate__roomtype" name="roomType" required>
+                  <option value="econom">Эконом</option>
+                  <option value="standart">Стандарт</option>
+                  <option value="lux">Люкс</option>
+                </select>
+              </label>
+            </div>
+            <div class="form-row">
+              <label class="label-overall">Даты проживания</label>
+            </div>
+            <div class="form-row col-2"> 
+              <label class="label-personal">От
+                <input class="form-calculate__datefrom" type="date" name="dateFrom" required>
+              </label>
+              <label class="label-personal">До
+                <input class="form-calculate__dateto" type="date" name="dateTo" required>
+              </label>
+            </div>
+            <div class="form-row result">Для расчета стоимости проживания заполните все поля корректно</div>
+            <div class="form-row col-2">
+              <button class="btn next">Далее >></button>
+            </div>
+          </form>
+          <form class="form-clientinfo" name="form-clientinfo">
+            <h2>Контакты</h2>
+            <div class="form-row">
+              <input class="form-clientinfo__fio" type="text" name="fio" required placeholder="ФИО">
+            </div>
+            <div class="form-row">
+              <input class="form-clientinfo__email" type="email" name="email" required placeholder="ваш@email.ru">
+            </div>
+            <div class="form-row">
+              <input class="form-clientinfo__tel" type="tel" name="tel" required placeholder="+7-xxx-xxx-xx-xx">
+            </div>
+            <div class="form-row result"></div>
+            <div class="form-row col-2">
+              <button class="btn back"><< Назад</button>
+              <button class="btn send" disabled>Отправить</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,55 @@
+doctype html
+html(lang='en')
+	head
+		meta(charset = 'utf-8')
+		meta(name='viewport', content="initial-scale=1.0, width=device-width")
+		title Booking form
+		script(src='js/script.js')
+		link(href='css/styles.css', rel='stylesheet')
+	body
+		div.page-wrap
+			h1(class='page-title') Отель Лето
+			div.page-content
+				div.form-booking-wrap
+					form.form-calculate(name='form-calculate')
+						h2 Форма расчета стоимости
+						div.form-row
+							label(class='label-overall') Количество гостей
+						div.form-row.col-3
+							label(class='label-personal') 
+								span Взрослые и дети 12+ 
+								span: input(type='number', class='form-calculate__numadult', name='numAdult', min='1', step='1', value='1', autofocus, required)
+							label(class='label-personal') 
+								span Дети 5-12 лет
+								span: input(type='number', class='form-calculate__numteenager', name='numTeenager', min='0', step='1', value='0')
+							label(class='label-personal') 
+								span Дети до 5 лет
+								span: input(type='number', class='form-calculate__numchild', name='numChild', min='0', step='1', value='0')
+						div.form-row 
+							label(class='label-overall label-personal') Тип номера
+								select(class='form-calculate__roomtype', name='roomType', required)
+									each index, name in {econom: 'Эконом', standart: 'Стандарт', lux: 'Люкс'}
+										option(value = name)= index
+						div.form-row
+							label(class='label-overall') Даты проживания
+						div.form-row.col-2 
+							label(class='label-personal') От
+								input(type='date', class='form-calculate__datefrom', name='dateFrom', required)
+							label(class='label-personal') До
+								input(type='date', class='form-calculate__dateto', name='dateTo', required)
+						div.form-row.result Для расчета стоимости проживания заполните все поля корректно
+						div.form-row.col-2
+							button(class='btn next') Далее >>
+
+					form.form-clientinfo(name='form-clientinfo')
+						h2 Контакты
+						div.form-row
+							input(type='text', class='form-clientinfo__fio', name='fio', required, placeholder='ФИО')
+						div.form-row
+							input(type='email', class='form-clientinfo__email', name='email', required, placeholder='ваш@email.ru')
+						div.form-row
+							input(type='tel', class='form-clientinfo__tel', name='tel', required, placeholder='+7-xxx-xxx-xx-xx')
+						div.form-row.result
+						div.form-row.col-2
+							button(class='btn back') << Назад
+							button(class='btn send', disabled) Отправить
